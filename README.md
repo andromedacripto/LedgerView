@@ -1,6 +1,6 @@
 # LedgerView
 
-DApp built on the **Base Network**, allowing users to view Ethereum wallets and balances in ETH, USDC and USDT.
+DApp built on the **Base Network**, allowing users to view EVM wallets and balances in ETH, USDC and USDT.
 
 ## Features
 
