@@ -19,6 +19,10 @@ DApp built on the **Base Network**, allowing users to view Ethereum wallets and 
 - **Blockchain:** Base Network (EVM-compatible)  
 - **Wallet Interaction:** Ethers.js  
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## Getting Started
 
 ### Install Dependencies
@@ -26,7 +30,5 @@ DApp built on the **Base Network**, allowing users to view Ethereum wallets and 
 ```bash
 npm install
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
