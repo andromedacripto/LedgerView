@@ -127,7 +127,7 @@ export default function BaseWalletChecker() {
         <footer className="mt-10 border-t pt-4 text-gray-600 text-sm">
           ©2025 LedgerView. Powered by{" "}
           <a
-            href="https://github.com/andromedacripto"
+            href="https://github.com/andromedacripto/LedgerView"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-blue-600"
