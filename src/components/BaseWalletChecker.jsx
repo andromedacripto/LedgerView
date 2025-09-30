@@ -91,7 +91,7 @@ export default function BaseWalletChecker() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 text-black">
       <div className="max-w-md w-full space-y-6 text-center shadow-lg p-6 rounded-xl bg-white">
         <header className="flex items-center justify-center gap-3">
-          <img src="/base-logo.png" alt="Base Logo" className="w-20 h-20" />
+          <img src="/base-logo.png" alt="Logo" className="w-20 h-20" />
           <h1 className="text-3xl font-bold">LedgerView</h1>
         </header>
 
