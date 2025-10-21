@@ -19,7 +19,7 @@ DApp built on the **Base Network**, allowing users to view Ethereum wallets and 
 - **Blockchain:** Base Network (EVM-compatible)  
 - **Wallet Interaction:** Ethers.js  
 
-Built by Dev Web 3.0 Landerson Catanhede with ❤️ for the Base community
+Built by Dev Web 3.0 Landerson Catanhede with ❤️ for the Base community -
 Wallet EVM: 0xdBDE47B99CcCd97cdb8BA5f6049b04e766659B53
 
 ## License
