@@ -1,0 +1,16 @@
+{
+  "name": "LedgerView",
+  "description": "Track and analyze your crypto transactions with AI-powered insights on Base",
+  "icon": "https://ledgerview.netlify.app/logo.png",
+  "homeUrl": "https://ledgerview.netlify.app",
+  "imageUrl": "https://ledgerview.netlify.app/preview.png",
+  "version": "1.0.0",
+  "miniapp": {
+    "url": "https://ledgerview.netlify.app"
+  },
+  "accountAssociation": {
+    "header": "TEMPORARY_HEADER",
+    "payload": "TEMPORARY_PAYLOAD",
+    "signature": "TEMPORARY_SIGNATURE"
+  }
+}
