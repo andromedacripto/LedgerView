@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@farcaster/hub-nodejs": "^0.15.9",
     "ethers": "^6.15.0",
     "lucide-react": "^0.546.0",
     "react": "^18.2.0",
