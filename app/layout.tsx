@@ -6,6 +6,9 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.ico',
+  },
   title: 'LedgerView — Base Network Explorer',
   description: 'Your trusted Base Network explorer for wallet management and token tracking.',
   other: {
