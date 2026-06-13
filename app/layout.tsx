@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'LedgerView — Base Network Explorer',
   description: 'Your trusted Base Network explorer for wallet management and token tracking.',
+  other: {
+    'base:app_id': '6a2a0efe0cfd412b2ab2b4b1',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
