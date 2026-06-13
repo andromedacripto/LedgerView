@@ -1,13 +1,12 @@
 import { http, createConfig, createStorage, cookieStorage } from 'wagmi'
 import { base } from 'wagmi/chains'
-import { injected } from 'wagmi/connectors'
-import { coinbaseWallet } from 'wagmi/connectors'
+import { coinbaseWallet, metaMask } from 'wagmi/connectors'
 
 export const config = createConfig({
   chains: [base],
   connectors: [
     coinbaseWallet({ appName: 'LedgerView', preference: 'smartWalletOnly' }),
-    injected(),
+    metaMask(),
   ],
   storage: createStorage({ storage: cookieStorage }),
   ssr: true,
