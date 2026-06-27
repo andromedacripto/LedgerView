@@ -14,12 +14,13 @@ export const TOKENS = {
   USDC: { symbol: 'USDC', address: '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913' as `0x${string}`, decimals: 6 },
 } as const
 
-export const BUILDER_CODE = 'bc_4663aej'
+export const BUILDER_CODE = 'bc_7wbyvrfn'
 export const ERC_MARKER = '80218021802180218021802180218021'
 
 export function getBuilderSuffix(): string {
   const codeHex = Array.from(new TextEncoder().encode(BUILDER_CODE))
     .map((b) => b.toString(16).padStart(2, '0')).join('')
   const lenHex = BUILDER_CODE.length.toString(16).padStart(2, '0')
-  return codeHex + lenHex + '00' + ERC_MARKER
+  // ERC-8021 format per docs.base.org: [length][code bytes][0x00][8021 marker, repeated]
+  return lenHex + codeHex + '00' + ERC_MARKER
 }
