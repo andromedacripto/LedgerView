@@ -13,6 +13,7 @@ import {
 import { ConnectWallet } from './ConnectWallet'
 import { NftClaimSection } from './NftClaimSection'
 import { TOKENS } from '../config/contracts'
+import { AgentChat } from './AgentChat'
 
 const publicClient = createPublicClient({
   chain: base,
@@ -302,6 +303,7 @@ export function BaseWalletChecker() {
           </div>
         </footer>
       </div>
+      <AgentChat />
     </div>
   )
 }
