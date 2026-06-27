@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useWriteContract, useWaitForTransactionReceipt, useReadContracts, useAccount, useChainId, useSwitchChain } from 'wagmi'
 import { base } from 'wagmi/chains'
 import { Sparkles, CheckCircle, AlertCircle, Loader, ExternalLink } from 'lucide-react'
-import { LVG_CONTRACT_ADDRESS, lvgAbi, getBuilderSuffix } from '../config/contracts'
+import { LVG_CONTRACT_ADDRESS, lvgAbi } from '../config/contracts'
 
 export function NftClaimSection() {
   const { address, isConnected } = useAccount()
@@ -48,12 +48,10 @@ export function NftClaimSection() {
 
   function handleMint() {
     if (!address) return
-    const suffix = getBuilderSuffix()
     writeContract({
       address: LVG_CONTRACT_ADDRESS,
       abi: lvgAbi,
       functionName: 'mint',
-      dataSuffix: `0x${suffix}` as `0x${string}`,
     })
   }
 
