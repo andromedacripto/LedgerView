@@ -1,3 +1,5 @@
+import { Attribution } from 'ox/erc8021'
+
 export const LVG_CONTRACT_ADDRESS = '0x595c48f98e69131a395B829A1873493EF5662596' as const
 
 export const lvgAbi = [
@@ -15,12 +17,5 @@ export const TOKENS = {
 } as const
 
 export const BUILDER_CODE = 'bc_7wbyvrfn'
-export const ERC_MARKER = '80218021802180218021802180218021'
 
-export function getBuilderSuffix(): string {
-  const codeHex = Array.from(new TextEncoder().encode(BUILDER_CODE))
-    .map((b) => b.toString(16).padStart(2, '0')).join('')
-  const lenHex = BUILDER_CODE.length.toString(16).padStart(2, '0')
-  // ERC-8021 format per docs.base.org: [length][code bytes][0x00][8021 marker, repeated]
-  return lenHex + codeHex + '00' + ERC_MARKER
-}
+export const DATA_SUFFIX = Attribution.toDataSuffix({ codes: [BUILDER_CODE] })
