@@ -1,0 +1,40 @@
+{
+  "name": "LedgerView Agent",
+  "description": "AI-powered blockchain analytics assistant for Base Mainnet. Analyzes wallet balances (ETH, USDC), transaction history, and LedgerView Genesis NFT ownership using live on-chain data, then explains the results in natural language.",
+  "version": "1.0.0",
+  "url": "https://ledgerview.vercel.app/api/agent/task",
+  "protocolVersion": "0.3",
+  "provider": {
+    "organization": "LedgerView",
+    "url": "https://ledgerview.vercel.app"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": ["application/json"],
+  "defaultOutputModes": ["application/json"],
+  "skills": [
+    {
+      "id": "wallet-analysis",
+      "name": "Wallet Analysis",
+      "description": "Analyzes a Base Mainnet wallet address: ETH balance, USDC balance, total transaction count, and LedgerView Genesis NFT mint status.",
+      "tags": ["base", "wallet", "balance", "blockchain"],
+      "examples": [
+        "Check wallet 0x595c48f98e69131a395B829A1873493EF5662596",
+        "What is the ETH balance of 0x..."
+      ],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    },
+    {
+      "id": "nft-check",
+      "name": "NFT Mint Status Check",
+      "description": "Checks whether a given wallet address has already minted the LedgerView Genesis NFT (LVG) on Base Mainnet.",
+      "tags": ["nft", "base", "erc721"],
+      "examples": ["Did 0x... already mint the LVG NFT?"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    }
+  ]
+}
