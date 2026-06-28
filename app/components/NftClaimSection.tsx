@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useWriteContract, useWaitForTransactionReceipt, useReadContracts, useAccount, useChainId, useSwitchChain } from 'wagmi'
 import { base } from 'wagmi/chains'
 import { Sparkles, CheckCircle, AlertCircle, Loader, ExternalLink } from 'lucide-react'
-import { LVG_CONTRACT_ADDRESS, lvgAbi } from '../config/contracts'
+import { LVG_CONTRACT_ADDRESS, lvgAbi, DATA_SUFFIX } from '../config/contracts'
 
 export function NftClaimSection() {
   const { address, isConnected } = useAccount()
@@ -52,6 +52,7 @@ export function NftClaimSection() {
       address: LVG_CONTRACT_ADDRESS,
       abi: lvgAbi,
       functionName: 'mint',
+      dataSuffix: DATA_SUFFIX,
     })
   }
 
@@ -97,7 +98,7 @@ export function NftClaimSection() {
         {writeError && (
           <div className="space-y-2 mt-3">
             <div className="flex items-start gap-2 text-sm text-red-700"><AlertCircle className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
-              <span>{writeError.message.includes('User rejected') ? 'Transaction cancelled.' : 'Mint failed. Try again.'}</span>
+              <span>{writeError.message.includes('User rejected') ? 'Transaction cancelled.' : 'Mint failed. Try again or use a browser wallet.'}</span>
             </div>
             <button onClick={reset} className="text-xs text-purple-600 hover:underline">Try again</button>
           </div>
