@@ -105,15 +105,24 @@ export function BaseWalletChecker() {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <div className="fixed inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
-        <div className="absolute inset-0 opacity-30">
+      <div
+        className="fixed inset-0"
+        style={{
+          backgroundImage: "url('/bg.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
           <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
           <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
         </div>
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
-            <div key={i} className="absolute w-2 h-2 bg-white rounded-full opacity-20"
+            <div key={i} className="absolute w-2 h-2 bg-white rounded-full opacity-10"
               style={{ left: `${(i * 17 + 5) % 100}%`, top: `${(i * 23 + 10) % 100}%`, animation: `float ${5 + (i % 5) * 2}s ease-in-out infinite`, animationDelay: `${i % 5}s` }} />
           ))}
         </div>
@@ -303,6 +312,7 @@ export function BaseWalletChecker() {
           </div>
         </footer>
       </div>
+
       <AgentChat />
     </div>
   )
